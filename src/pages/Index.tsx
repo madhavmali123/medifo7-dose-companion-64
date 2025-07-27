@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="font-sans">
+    <div className="font-sans bg-background text-foreground antialiased">
       <Navigation />
       <main>
         <div id="home">
@@ -17,7 +17,7 @@ const Index = () => {
         <About />
         <Features />
         <Achievements />
-        <Contact />
+        
       </main>
       <Footer />
     </div>

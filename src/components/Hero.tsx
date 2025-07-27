@@ -2,52 +2,67 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Shield, Smartphone } from "lucide-react";
 import heroImage from "@/assets/medifor7-device.jpg";
 import heroBackground from "@/assets/hero-background.jpg";
+import FreeTrialModal from "./FreeTrialModal";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <section className="relative min-h-screen mt-4 flex items-center justify-center overflow-hidden bg-white">
       {/* Background */}
-      <div 
+      <div
         className="absolute inset-0 bg-gradient-hero opacity-10"
         style={{
           backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundBlendMode: "overlay",
         }}
       />
-      
+
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-semibold bg-gradient-primary bg-clip-text text-transparent">MediFor7</span>
+              <span className="text-xl font-semibold bg-gradient-primary bg-clip-text text-transparent">
+                MediFor7
+              </span>
             </div>
-            
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-foreground">
+
+            <h1 className="text-3xl lg:text-6xl font-bold leading-tight text-foreground">
               Your Personal
               <span className="block bg-gradient-primary bg-clip-text text-transparent">
                 Medication Manager
               </span>
             </h1>
-            
+
             <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-              Smart, reliable, and affordable solution designed to simplify your medication journey. 
-              Never miss a dose with our intelligent hardware and mobile app.
+              Our Mission Is To Improve The Lives Of Individuals And Families By
+              Providing A Smart, Reliable, And Affordable Solution For
+              Medication Management.
             </p>
-            
+            <div className="flex items-center gap-2 mt-2">
+              <img
+                src="https://medifor7.com/assets/people-021fcccd.png"
+                alt="Decorative icon"
+                className="w-30 h-12 object-contain"
+              />
+              <p className="text-base text-muted-foreground">
+                Trusted by 1600+ people
+              </p>
+            </div>
+
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="text-lg px-8 py-6">
+              {/* <Button variant="hero" size="lg" className="text-lg px-8 py-6">
                 Try It Free
                 <ArrowRight className="ml-2" />
-              </Button>
+              </Button> */}
+              <FreeTrialModal/>
               <Button variant="outline" size="lg" className="text-lg px-8 py-6">
                 Learn More
               </Button>
             </div>
-            
+
             {/* Trust Indicators */}
             <div className="flex items-center gap-6 pt-4">
               <div className="flex items-center gap-2 text-muted-foreground">
@@ -64,13 +79,13 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Right Content - Device Image */}
           <div className="relative">
             <div className="relative group">
-              <img 
-                src={heroImage} 
-                alt="MediFor7 Smart Medication Device" 
+              <img
+                src={heroImage}
+                alt="MediFor7 Smart Medication Device"
                 className="w-full max-w-lg mx-auto rounded-2xl shadow-card group-hover:scale-105 transition-transform duration-300"
               />
               {/* Floating Elements */}
@@ -84,7 +99,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-muted-foreground animate-bounce">
         <div className="w-6 h-10 border-2 border-border rounded-full flex justify-center">
